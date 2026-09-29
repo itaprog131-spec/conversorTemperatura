@@ -1,0 +1,41 @@
+<ConvertidorTemperatura>:
+    orientation: "vertical"
+    padding: dp(20)
+    spacing: dp(15)
+    Label: 
+        text: "Conversor de temperaturas CBTA 131" 
+        font_size: sp(22)
+        bold: True
+       
+        height: dp(60)
+        text_size: self.width, None
+        halign: "center"
+        valign: "middle"
+    Label:
+        id: lbl_celsius
+        text: "Temperatura: 0 °C"
+        font_size: sp(30)
+        height: dp(60)
+        text_size: self.width, None
+        halign: "center"
+        valign: "middle"
+        color: 1, 0, 1, 1
+    Slider:
+        min: 0
+        max: 100
+        value: 0
+        step: 1
+      
+        height: dp(60)
+        on_value: root.convertir_temperatura(self.value)
+
+    Label:
+        id: lbl_fahrenheit
+        text: "Equivale a: 32 °F"
+        font_size: sp(30)
+        text_size: self.width, None
+       
+        height: dp(60)
+        halign: "center"
+        valign: "middle"
+        color: 1, 0, 0, 1
